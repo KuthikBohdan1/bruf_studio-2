@@ -1,0 +1,9 @@
+<h1>{{ heading }}</h1>
+{% if intro %}<p>{{ intro }}</p>{% endif %}
+{% for block in blocks %}{% if block.h2 %}<h2>{{ block.h2 }}</h2>
+{% elif block.h3 %}<h3>{{ block.h3 }}</h3>
+{% elif block.p %}{{ block.p|linebreaks }}
+{% elif block.ul %}<ul>{% for item in block.ul %}<li>{{ item }}</li>{% endfor %}</ul>
+{% elif block.links %}<ul>{% for link in block.links %}<li><a href="{{ link.href }}">{{ link.text }}</a>{% if link.note %} — {{ link.note }}{% endif %}</li>{% endfor %}</ul>
+{% endif %}{% endfor %}
+<nav><ul>{% for link in nav %}<li><a href="{{ link.href }}"{% if link.lang %} hreflang="{{ link.lang }}"{% endif %}>{{ link.text }}</a></li>{% endfor %}</ul></nav>

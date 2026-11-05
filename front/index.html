@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="{{ seo.lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--
+      Rendered by Django (main/seo.py) in production: every seo placeholder
+      below is filled from the database, so crawlers and link previews get real
+      content instead of an empty SPA shell. Django parses this file as a
+      template - do not write template syntax inside comments.
+    -->
+    <title>{{ seo.title }}</title>
+    <meta name="description" content="{{ seo.description }}" />
+    {% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}" />{% endif %}
+    {% if seo.url_uk %}<link rel="alternate" hreflang="uk" href="{{ seo.url_uk }}" />{% endif %}
+    {% if seo.url_en %}<link rel="alternate" hreflang="en" href="{{ seo.url_en }}" />{% endif %}
+    {% if seo.url_uk %}<link rel="alternate" hreflang="x-default" href="{{ seo.url_uk }}" />{% endif %}
+    <meta name="robots" content="{{ seo.robots }}" />
+
+    <meta property="og:type" content="{{ seo.og_type }}" />
+    <meta property="og:locale" content="{{ seo.locale }}" />
+    {% if seo.locale_alternate %}<meta property="og:locale:alternate" content="{{ seo.locale_alternate }}" />{% endif %}
+    <meta property="og:site_name" content="{{ seo.site_name }}" />
+    <meta property="og:title" content="{{ seo.title }}" />
+    <meta property="og:description" content="{{ seo.description }}" />
+    <meta property="og:url" content="{{ seo.canonical }}" />
+    {% if seo.image %}<meta property="og:image" content="{{ seo.image }}" />{% endif %}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ seo.title }}" />
+    <meta name="twitter:description" content="{{ seo.description }}" />
+    {% if seo.image %}<meta name="twitter:image" content="{{ seo.image }}" />{% endif %}
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f2ed" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f0f0f" />
+
+    <!-- The app needs these right away: start fetching before its code arrives. -->
+    <link rel="preload" href="/api/site/?lang={{ seo.lang }}" as="fetch" crossorigin="anonymous" />
+    {% if seo.preload_image %}<link rel="preload" href="{{ seo.preload_image }}" as="image" fetchpriority="high" />{% endif %}
+
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/static/favicon-96x96.png" sizes="96x96" type="image/png" />
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
+
+    <script type="application/ld+json">{{ seo.jsonld|safe }}</script>
+
+    <!--
+      Theme before first paint, so there is no flash of the wrong colours.
+      Same rules as src/lib/theme.ts: a manual choice holds until it expires,
+      otherwise dark from 20:00 to 08:00 and the OS scheme during the day.
+    -->
+    <script>
+      (function () {
+        var dark;
+        try {
+          var override = JSON.parse(localStorage.getItem("theme-override") || "null");
+          if (override && override.until > Date.now()) dark = override.theme === "dark";
+        } catch (error) {
+          /* private mode or a malformed value: use the schedule */
+        }
+        if (dark === undefined) {
+          var hour = new Date().getHours();
+          dark = hour >= 20 || hour < 8 || window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+    <noscript>
+      <style>
+        div.seo-fallback { position: static; width: auto; height: auto; overflow: visible; clip-path: none; max-width: 46rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+        div.seo-fallback h1 { font-size: 2rem; font-weight: 600; }
+        div.seo-fallback h2 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; }
+        div.seo-fallback h3 { font-weight: 600; margin-top: 1.25rem; }
+        div.seo-fallback p, div.seo-fallback ul { margin-top: 0.75rem; }
+        div.seo-fallback a { text-decoration: underline; }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <!-- Plain text and links for readers without JavaScript; the app replaces them on start. -->
+    <div id="root"><div class="seo-fallback">{{ seo.body|safe }}</div></div>
+    <noscript>{% if seo.lang == "en" %}This site needs JavaScript.{% else %}Для роботи сайту потрібен JavaScript.{% endif %}</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

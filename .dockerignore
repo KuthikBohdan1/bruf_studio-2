@@ -1,0 +1,19 @@
+.git
+.gitignore
+.env
+.vscode
+CLAUDE.md
+README.md
+
+# Python
+**/__pycache__
+**/*.py[cod]
+django/.venv
+django/db.sqlite3
+django/media
+django/staticfiles
+django/frontend_dist
+
+# Node — dependencies and build output are produced inside the image
+front/node_modules
+front/dist

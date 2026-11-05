@@ -1,0 +1,33 @@
+# Shared-server overlay: another stack's Caddy already owns ports 80/443 and
+# joins the external `edge` network. Instead of starting our own TLS
+# terminator (compose.prod.yaml), `web` joins `edge` under a unique alias and
+# that Caddy proxies the domain to it:
+#
+#   bruf.pro {
+#       reverse_proxy bruf-web:8000
+#   }
+#
+# Use it via .env on the server:
+#   COMPOSE_PROJECT_NAME=bruf
+#   COMPOSE_FILE=compose.yaml:compose.edge.yaml
+#
+# Note: /media is served by Django here (no Range requests), so uploaded
+# videos may not play in Safari until the shared Caddy serves /media itself.
+
+services:
+  db:
+    # Loopback ports on a shared host are usually taken; the DB stays internal.
+    ports: !reset []
+
+  web:
+    # Fewer workers: the shared box is short on memory.
+    command: ["gunicorn", "config.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "2", "--threads", "2", "--access-logfile", "-", "--error-logfile", "-"]
+    networks:
+      default:
+      edge:
+        aliases:
+          - bruf-web
+
+networks:
+  edge:
+    external: true

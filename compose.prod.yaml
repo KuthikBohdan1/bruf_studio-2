@@ -1,0 +1,33 @@
+# Production overlay — adds the TLS terminator in front of the base stack.
+#
+#   docker compose -f compose.yaml -f compose.prod.yaml up -d --build
+#
+# The base file publishes web and db on 127.0.0.1 only; Caddy is the sole
+# service bound to public interfaces and reaches gunicorn over the compose
+# network. Certificates are issued and renewed automatically by Caddy.
+
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Certificates and the ACME account key live here. Losing this volume
+      # means re-issuing on every restart, which burns Let's Encrypt quota.
+      - caddy_data:/data
+      - caddy_config:/config
+      # Uploads are served by Caddy directly: it answers Range requests, which
+      # Safari requires to play <video>; Django's static serve() does not.
+      - media_data:/srv/media:ro
+    depends_on:
+      web:
+        condition: service_healthy
+
+volumes:
+  caddy_data:
+  caddy_config:

@@ -1,0 +1,965 @@
+[
+  {
+    "model": "main.sitesettings",
+    "pk": 1,
+    "fields": {
+      "name": "bruf",
+      "tagline": "Сайти, що працюють на ваш бізнес",
+      "description": "Сайти для малого й середнього бізнесу: лендінги, сайти компаній, інтернет-магазини й вебсервіси. Від дизайну до запуску.",
+      "availability": "Беремо 2 нові проєкти на грудень",
+      "hero_video": "site/hero-wall-720.mp4",
+      "hero_poster": "site/hero-wall-640.jpg",
+      "email": "bkuzik7@gmail.com",
+      "phone": "",
+      "address": "Львів, Україна · працюємо віддалено",
+      "seo_title": "Розробка сайтів у Львові та Україні за 7 днів | bruf",
+      "tagline_en": "Websites that work for your business",
+      "seo_title_en": "Website development in Lviv and Ukraine in 7 days | bruf",
+      "description_en": "Websites for small and medium businesses: landing pages, company sites, online stores and web services. From design to launch.",
+      "availability_en": "Taking 2 new projects for December",
+      "address_en": "Lviv, Ukraine · working remotely",
+      "seo_description": "Створення сайтів для бізнесу: лендінги від 5 500 ₴, сайти компаній, інтернет-магазини й вебсервіси. Робоча версія за 7 днів.",
+      "seo_description_en": "Websites for business: landing pages from ₴5,500, company sites, online stores and web services. A working version in 7 days."
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 1,
+    "fields": {
+      "title": "Бриф і аналітика",
+      "description": "Короткий дзвінок або листування: цілі, аудиторія, конкуренти. На виході — план сторінок і список того, що потрібно від вас.",
+      "duration": "День 1",
+      "order": 1,
+      "title_en": "Brief and research",
+      "description_en": "A short call or a chat: goals, audience, competitors. The outcome is a page plan and a list of what we need from you.",
+      "duration_en": "Day 1"
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 2,
+    "fields": {
+      "title": "Прототип",
+      "description": "Чорно-біла структура кожної сторінки: що і в якому порядку бачить відвідувач. Узгоджуємо її до того, як братися за дизайн.",
+      "duration": "День 2",
+      "order": 2,
+      "title_en": "Prototype",
+      "description_en": "A black-and-white structure of every page: what the visitor sees and in what order. We agree on it before starting the design.",
+      "duration_en": "Day 2"
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 3,
+    "fields": {
+      "title": "Дизайн",
+      "description": "Візуальна концепція й мобільні версії. Показуємо живий макет у Figma, а правки вносимо одразу.",
+      "duration": "Дні 3–4",
+      "order": 3,
+      "title_en": "Design",
+      "description_en": "A visual concept and the mobile versions. We show a live layout in Figma and make changes right away.",
+      "duration_en": "Days 3–4"
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 4,
+    "fields": {
+      "title": "Розробка",
+      "description": "Верстка, адмінка, інтеграції. Робоча версія з'являється на тестовому сервері — її можна відкрити з телефона й перевірити.",
+      "duration": "Дні 4–6",
+      "order": 4,
+      "title_en": "Development",
+      "description_en": "Front end, admin, integrations. The working version appears on a test server — you can open it on your phone and check it.",
+      "duration_en": "Days 4–6"
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 5,
+    "fields": {
+      "title": "Тестування й запуск",
+      "description": "Перевіряємо на реальних пристроях, налаштовуємо аналітику, SEO й резервні копії, переносимо на бойовий сервер без простою.",
+      "duration": "День 7",
+      "order": 5,
+      "title_en": "Testing and launch",
+      "description_en": "We test on real devices, set up analytics, SEO and backups, and move to the production server with no downtime.",
+      "duration_en": "Day 7"
+    }
+  },
+  {
+    "model": "main.processstep",
+    "pk": 6,
+    "fields": {
+      "title": "Підтримка",
+      "description": "Після запуску лишаємось на зв'язку: місяць гарантійної підтримки безкоштовно, далі — за пакетом годин.",
+      "duration": "після запуску",
+      "order": 6,
+      "title_en": "Support",
+      "description_en": "After launch we stay in touch: a month of warranty support for free, then a package of hours.",
+      "duration_en": "after launch"
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 1,
+    "fields": {
+      "question": "Скільки коштує сайт?",
+      "answer": "Лендінг — від 5 500 ₴, анімований 3D-сайт — від 7 500 ₴, сайт компанії — від 9 500 ₴, інтернет-магазин — від 12 500 ₴. Точну суму називаємо після брифу, і вона фіксується в договорі.",
+      "order": 1,
+      "question_en": "How much does a website cost?",
+      "answer_en": "A landing page starts at ₴5,500, an animated 3D site at ₴7,500, a company site at ₴9,500 and an online store at ₴12,500. We name the exact sum after the brief, and it is fixed in the contract."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 2,
+    "fields": {
+      "question": "Скільки часу займає розробка?",
+      "answer": "7 днів від старту до робочої версії — і для лендінгу, і для 3D-сайту, сайту компанії чи магазину. Етапи й дати прописуються в договорі, щоб ви бачили, на якому етапі робота.",
+      "order": 2,
+      "question_en": "How long does development take?",
+      "answer_en": "7 days from kick-off to a working version — whether it is a landing page, a 3D site, a company site or a store. Stages and dates are set out in the contract, so you always know where the work is."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 3,
+    "fields": {
+      "question": "Чи зможу я сам змінювати контент?",
+      "answer": "Так. Кожен сайт має адмін-панель: тексти, фото, ціни, кейси й новини редагуються без програміста. Після запуску проводимо коротке навчання.",
+      "order": 3,
+      "question_en": "Will I be able to change the content myself?",
+      "answer_en": "Yes. Every site has an admin panel: copy, photos, prices, cases and news are edited without a developer. After launch we give you a short walkthrough."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 4,
+    "fields": {
+      "question": "Що потрібно від нас для старту?",
+      "answer": "Година на бриф-зустріч і контактна людина, яка відповідає на питання протягом дня. Тексти й фото можемо підготувати самі.",
+      "order": 4,
+      "question_en": "What do you need from us to start?",
+      "answer_en": "An hour for the brief meeting and a contact person who answers questions within the day. We can prepare the copy and photos ourselves."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 5,
+    "fields": {
+      "question": "Ви працюєте за договором?",
+      "answer": "Так, з ФОП або ТОВ. Оплата поетапно: передоплата за перший етап, далі — після приймання кожного наступного.",
+      "order": 7,
+      "question_en": "Do you work under a contract?",
+      "answer_en": "Yes, as a sole proprietor or a company. Payment is by stage: an advance for the first stage, then after you sign off each next one."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 6,
+    "fields": {
+      "question": "Що буде після запуску?",
+      "answer": "Місяць гарантійної підтримки безкоштовно. Далі — за бажанням: пакет годин на розвиток або просто моніторинг і резервні копії.",
+      "order": 8,
+      "question_en": "What happens after launch?",
+      "answer_en": "A month of warranty support for free. After that, if you like: a package of hours for new work, or just monitoring and backups."
+    }
+  },
+  {
+    "model": "main.sociallink",
+    "pk": 1,
+    "fields": {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/brief_studios/",
+      "order": 1
+    }
+  },
+  {
+    "model": "main.sociallink",
+    "pk": 2,
+    "fields": {
+      "name": "Telegram",
+      "url": "https://t.me/brief_studio",
+      "order": 2
+    }
+  },
+  {
+    "model": "main.sociallink",
+    "pk": 3,
+    "fields": {
+      "name": "GitHub",
+      "url": "https://github.com/KuthikBohdan1",
+      "order": 3
+    }
+  },
+  {
+    "model": "main.sociallink",
+    "pk": 4,
+    "fields": {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/bohdan-kuzik-687a633b8",
+      "order": 4
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 1,
+    "fields": {
+      "client": "",
+      "video": "projects/dental.mp4",
+      "order": 3,
+      "slug": "dental",
+      "title": "Дентал Кліні — стоматологічна клініка",
+      "category": "Медицина",
+      "year": 2026,
+      "color": "#17332B",
+      "url": "https://dental-cl.pp.ua/",
+      "image": "projects/dental.jpg",
+      "description": "Сайт стоматології з онлайн-записом, прайсом, командою лікарів і роботами «до/після». Дві мови, весь контент — з адмінки.",
+      "challenge": "До стоматолога йдуть зі страхом і одним питанням: скільки це коштуватиме. Сайт мав зняти обидва — чесно показати ціни й лікарів і дати записатися без дзвінка.",
+      "solution": "Тон задали з першого екрана: «Лікуємо зуби без поспіху й без сюрпризів у рахунку». Прайс зібрали в розкривні групи на нативному <details> — він відкривається навіть без JavaScript.\n\nРоботи «до/після» — порівняння двох знімків, де смужку можна тягнути мишею, пальцем або стрілками з клавіатури. У кожного лікаря власна картка зі стажем і напрямами роботи.\n\nОнлайн-запис — послуга, лікар, дата й час; заявки потрапляють в адмінку зі статусами. Українська й англійська перемикаються без перезавантаження сторінки, а неперекладене поле підміняється українським, тож сторінка ніколи не буває напівпорожньою.",
+      "result": "Пацієнт сам знаходить ціну, лікаря й зручний час, а адміністратор отримує готову заявку замість дзвінка «а можна дізнатися…».",
+      "stack": "Django REST Framework, React, TypeScript, Vite, PostgreSQL, nginx, Docker",
+      "title_en": "Dental Clinic — a dental practice",
+      "category_en": "Healthcare",
+      "description_en": "A dental clinic site with online booking, a price list, the team of doctors and before/after work. Two languages, all content from the admin.",
+      "challenge_en": "People go to the dentist with fear and one question: how much will it cost. The site had to remove both — show prices and doctors honestly and let people book without a phone call.",
+      "solution_en": "The tone is set on the first screen: “We treat teeth without haste and without surprises in the bill”. The price list is grouped into expandable sections on the native <details> element — it opens even without JavaScript.\n\nBefore/after work is a comparison of two photos with a slider you can drag with the mouse, a finger or the arrow keys. Every doctor has their own card with experience and areas of work.\n\nOnline booking is service, doctor, date and time; requests land in the admin with statuses. Ukrainian and English switch without reloading the page, and an untranslated field falls back to Ukrainian, so a page is never half empty.",
+      "result_en": "Patients find the price, the doctor and a convenient time on their own, and the receptionist gets a ready request instead of a “could you tell me…” call.",
+      "service": 3
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 1,
+    "fields": {
+      "project": 1,
+      "value": "2 мови",
+      "label": "українська й англійська",
+      "order": 1,
+      "value_en": "2 languages",
+      "label_en": "Ukrainian and English"
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 2,
+    "fields": {
+      "project": 1,
+      "value": "4 кроки",
+      "label": "онлайн-запису: послуга, лікар, дата, час",
+      "order": 2,
+      "value_en": "4 steps",
+      "label_en": "of online booking: service, doctor, date, time"
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 3,
+    "fields": {
+      "project": 1,
+      "value": "100%",
+      "label": "контенту редагується в адмінці",
+      "order": 3,
+      "value_en": "100%",
+      "label_en": "of the content is edited in the admin"
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 2,
+    "fields": {
+      "client": "",
+      "video": "projects/hrazhda.mp4",
+      "order": 1,
+      "slug": "hrazhda",
+      "title": "Гражда — сімейний готель у Карпатах",
+      "category": "Готель у Карпатах",
+      "year": 2026,
+      "color": "#26302A",
+      "url": "https://complex.pp.ua/",
+      "image": "projects/hrazhda.jpg",
+      "description": "Сайт сімейного готелю на 14 номерів у Синевирській Поляні: номери й сезонні ціни, кухня, активності й запит на бронювання.",
+      "challenge": "Готель у горах продає атмосферу — туман, смереки, чан під зорями. Сайт мав передати її з першого екрана і водночас швидко відповісти на практичне: які номери, скільки коштує взимку і як забронювати.",
+      "solution": "Перший екран — ліс згори й заголовок «Де туман ночує на смереках». Перемикач «Літо / Зима» показує сезонні ціни й активності: тарифи номерів в адмінці задаються окремо для кожного сезону.\n\nСайт зроблено на Django-шаблонах із точковим JavaScript: плавний скрол на Lenis, анімації на GSAP, стилі на Tailwind. Сторінки приходять готовим HTML — швидко для гостя й зрозуміло для пошуковика.\n\nНомери з галереями, кухня, активності, відгуки, FAQ і запит на бронювання редагуються в адмінці. Дві мови — українська й англійська.",
+      "result": "Гість за хвилину бачить номери, ціни на свій сезон і дорогу до Синевиру й лишає запит на дати, а власник отримує його в адмінці.",
+      "stack": "Django, Tailwind CSS, GSAP, Lenis, esbuild, PostgreSQL, Docker",
+      "title_en": "Hrazhda — a family hotel in the Carpathians",
+      "category_en": "Hotel in the Carpathians",
+      "description_en": "A site for a family hotel with 14 rooms in Synevyrska Poliana: rooms and seasonal prices, the kitchen, activities and a booking request.",
+      "challenge_en": "A hotel in the mountains sells an atmosphere — fog, spruces, a hot tub under the stars. The site had to convey it from the first screen and at the same time quickly answer the practical questions: which rooms, what it costs in winter and how to book.",
+      "solution_en": "The first screen is the forest from above and the headline “Where the fog spends the night on the spruces”. A Summer / Winter switch shows seasonal prices and activities: room rates are set in the admin separately for each season.\n\nThe site is built on Django templates with targeted JavaScript: smooth scrolling with Lenis, animation with GSAP, styles with Tailwind. Pages arrive as ready HTML — fast for the guest and clear for search engines.\n\nRooms with galleries, the kitchen, activities, reviews, FAQ and the booking request are edited in the admin. Two languages — Ukrainian and English.",
+      "result_en": "In a minute a guest sees the rooms, the prices for their season and the way to Synevyr, and leaves a request for their dates, which the owner gets in the admin.",
+      "service": 3
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 4,
+    "fields": {
+      "project": 2,
+      "value": "14",
+      "label": "номерів у каталозі",
+      "order": 1,
+      "value_en": "14",
+      "label_en": "rooms in the catalogue"
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 5,
+    "fields": {
+      "project": 2,
+      "value": "2 сезони",
+      "label": "літо й зима — свої ціни й активності",
+      "order": 2,
+      "value_en": "2 seasons",
+      "label_en": "summer and winter, each with its own prices and activities"
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 6,
+    "fields": {
+      "project": 2,
+      "value": "2 мови",
+      "label": "українська й англійська",
+      "order": 3,
+      "value_en": "2 languages",
+      "label_en": "Ukrainian and English"
+    }
+  },
+  {
+    "model": "main.project",
+    "pk": 4,
+    "fields": {
+      "client": "",
+      "video": "projects/lumiere.mp4",
+      "order": 2,
+      "slug": "lumiere",
+      "title": "Lumière — ресторан із доставкою",
+      "category": "Ресторан",
+      "year": 2026,
+      "color": "#3A2416",
+      "url": "https://restoran.pp.ua/",
+      "image": "projects/lumiere.jpg",
+      "description": "Сайт ресторану високої кухні з меню, кошиком і онлайн-замовленням: таймер готовності й статус замовлення оновлюються наживо.",
+      "challenge": "Гостю, який замовив доставку, важливо одне — коли буде їжа. Сайт мав не просто прийняти замовлення, а чесно показувати, скільки ще чекати.",
+      "solution": "Меню й страви приходять з API, кошик зберігається в браузері. Час приготування рахується за найдовшою стравою: кухня готує паралельно, тож замовлення готове тоді, коли готова найповільніша.\n\nПісля оформлення гість бачить таймер. Щойно кухня змінює статус в адмінці, Django через Channels надсилає його у WebSocket — сторінка оновлюється без перезавантаження. Коли таймер доходить до нуля, з'являється анімований кур'єр на скутері.\n\nNginx віддає зібраний React і статику та проксує API, адмінку й WebSocket до Django на Daphne — усе з одного домену, без CORS.",
+      "result": "Ресторан отримує власний канал замовлень без комісій агрегаторів, а гість — прозорий статус від кошика до дверей.",
+      "stack": "React, Vite, Tailwind, Django REST Framework, Django Channels, Daphne, Redis, PostgreSQL, nginx",
+      "title_en": "Lumière — a restaurant with delivery",
+      "category_en": "Restaurant",
+      "description_en": "A fine-dining restaurant site with a menu, a cart and online ordering: the readiness timer and order status update live.",
+      "challenge_en": "A guest who ordered delivery cares about one thing — when the food will arrive. The site had not only to take the order but to show honestly how long is left to wait.",
+      "solution_en": "The menu and dishes come from an API, and the cart is kept in the browser. Cooking time is counted by the longest dish: the kitchen cooks in parallel, so the order is ready when the slowest dish is.\n\nAfter checkout the guest sees a timer. As soon as the kitchen changes the status in the admin, Django sends it over Channels into the WebSocket — the page updates without reloading. When the timer reaches zero, an animated courier on a scooter appears.\n\nNginx serves the built React app and static files and proxies the API, the admin and the WebSocket to Django on Daphne — all from one domain, no CORS.",
+      "result_en": "The restaurant gets its own ordering channel with no aggregator fees, and the guest gets a clear status from the cart to the door.",
+      "service": 4
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 10,
+    "fields": {
+      "project": 4,
+      "value": "Live",
+      "label": "статус замовлення через WebSocket",
+      "order": 1,
+      "value_en": "Live",
+      "label_en": "order status over WebSocket"
+    }
+  },
+  {
+    "model": "main.projectmetric",
+    "pk": 11,
+    "fields": {
+      "project": 4,
+      "value": "+10 хв",
+      "label": "до часу кухні — на доставку",
+      "order": 2,
+      "value_en": "+10 min",
+      "label_en": "on top of kitchen time for delivery"
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 1,
+    "fields": {
+      "title": "Лендінги",
+      "description": "Одна сторінка під одну мету: рекламна кампанія, запуск продукту, подія. Структура під заявку, а не під шаблон.",
+      "deliverables": "Структура під цільову дію\nУнікальний дизайн без шаблонів\nАдаптив під телефони й планшети\nАналітика та пікселі\nЗаявки одразу в Telegram або CRM",
+      "price_from": "від 5 500 ₴",
+      "duration": "7 днів",
+      "order": 1,
+      "title_en": "Landing pages",
+      "description_en": "One page for one goal: an ad campaign, a product launch, an event. Structured to bring requests, not to fit a template.",
+      "deliverables_en": "Structure built around the target action\nCustom design, no templates\nResponsive for phones and tablets\nAnalytics and pixels\nRequests straight to Telegram or your CRM",
+      "price_from_en": "from ₴5,500",
+      "duration_en": "7 days",
+      "slug": "landing-page",
+      "headline": "Створення лендінгу",
+      "headline_en": "Landing page development",
+      "seo_title": "Створення лендінгу від 5 500 ₴ за 7 днів | bruf",
+      "seo_title_en": "Landing page development from ₴5,500 in 7 days | bruf",
+      "seo_description": "Лендінг під рекламу, запуск продукту чи подію: унікальний дизайн, адаптив, аналітика й заявки в Telegram. Від 5 500 ₴, робоча версія за 7 днів.",
+      "seo_description_en": "A landing page for ads, a product launch or an event: custom design, mobile version, analytics and requests in Telegram. From ₴5,500, working in 7 days.",
+      "intro": "Лендінг — це одна сторінка під одну дію: залишити заявку, записатися, купити. Робимо його під вашу пропозицію, а не під шаблон, і за 7 днів показуємо робочу версію.",
+      "intro_en": "A landing page is one page for one action: leave a request, book, buy. We build it around your offer rather than a template, and show a working version in 7 days.",
+      "details": "## Кому підходить лендінг\n\n- Ви запускаєте рекламу на одну послугу чи продукт\n- У вас одна основна пропозиція\n- Треба швидко перевірити ідею або попит\n- Потрібна окрема сторінка під подію чи акцію\n\n## Як ми його робимо\n\nСпершу визначаємо, яку одну дію має зробити відвідувач, і будуємо структуру навколо неї: що він бачить першим, які питання закриваємо, де стоїть кнопка. Потім дизайн під ваш бренд і верстка, яка однаково добре працює на телефоні й ноутбуці.\n\nЗаявки приходять одразу в Telegram або CRM, а тексти й ціни ви можете змінювати самі в адмінці.\n\n## Від чого залежить ціна\n\nЦіна починається від 5 500 ₴. Її змінюють кількість блоків, анімації, інтеграції та те, чи є у вас готові тексти й фото. Точну суму називаємо після короткої розмови й фіксуємо в договорі.",
+      "details_en": "## Who a landing page suits\n\n- You are running ads for one service or product\n- You have one main offer\n- You need to test an idea or demand quickly\n- You need a separate page for an event or a promotion\n\n## How we build it\n\nFirst we settle on the one action a visitor should take and build the structure around it: what they see first, which questions we answer, where the button goes. Then comes the design for your brand, and a front end that works equally well on a phone and a laptop.\n\nRequests go straight to Telegram or your CRM, and you can change the copy and prices yourself in the admin.\n\n## What the price depends on\n\nPrices start at ₴5,500. The number of sections, animation, integrations and whether you already have copy and photos all change it. We name the exact sum after a short talk and fix it in the contract."
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 2,
+    "fields": {
+      "title": "Анімовані 3D-сайти",
+      "description": "Сайти з 3D-сценою, анімаціями при скролі й живими мікровзаємодіями — коли сайт має запам'ятатися з першого екрана.",
+      "deliverables": "3D-сцена або модель на першому екрані\nАнімації при скролі\nЛегша версія для телефонів без втрати вигляду\nРежим без анімацій для тих, кому так комфортніше\nАдмінка для текстів і фото",
+      "price_from": "від 7 500 ₴",
+      "duration": "7 днів",
+      "order": 2,
+      "title_en": "Animated 3D websites",
+      "description_en": "Sites with a 3D scene, scroll animation and lively micro-interactions — for when a site has to be remembered from the first screen.",
+      "deliverables_en": "A 3D scene or model on the first screen\nScroll animation\nA lighter phone version that keeps the look\nA no-animation mode for those who prefer it\nAn admin for copy and photos",
+      "price_from_en": "from ₴7,500",
+      "duration_en": "7 days",
+      "slug": "3d-website",
+      "headline": "Створення анімованого 3D-сайту",
+      "headline_en": "Animated 3D website development",
+      "seo_title": "Створення анімованого 3D-сайту від 7 500 ₴ | bruf",
+      "seo_title_en": "Animated 3D website development from ₴7,500 | bruf",
+      "seo_description": "Сайт із 3D-сценою й анімаціями при скролі, який запам'ятовується з першого екрана. Легка версія для телефонів і адмінка. Від 7 500 ₴, робоча версія за 7 днів.",
+      "seo_description_en": "A site with a 3D scene and scroll animation that people remember from the first screen. A light phone version and an admin. From ₴7,500, working in 7 days.",
+      "intro": "Анімований 3D-сайт потрібен, коли важливо запам'ятатися з першого екрана: 3D-сцена, анімації при скролі й живі мікровзаємодії. При цьому сайт лишається швидким на телефоні.",
+      "intro_en": "An animated 3D website is for when you need to be remembered from the first screen: a 3D scene, scroll animation and lively micro-interactions. And the site stays fast on a phone.",
+      "details": "## Коли 3D справді потрібен\n\n- Продукт варто показати з усіх боків\n- Бренд виграє від незвичної подачі\n- Сайт має вирізнятися серед конкурентів, а не лише приймати заявки\n\nЯкщо головне — швидко отримувати заявки з реклами, чесно порадимо простіший лендінг.\n\n## Щоб краса не заважала\n\n3D й анімації легко роблять сайт повільним, тому для телефонів готуємо легшу версію, яка зберігає вигляд. Для тих, у кого в системі вимкнені анімації, працює спокійний режим без руху.\n\nТексти й фото ви змінюєте самі в адмінці, без розробника.\n\n## Від чого залежить ціна\n\nЦіна починається від 7 500 ₴. Її змінюють складність 3D-сцени, кількість анімацій і сторінок та те, чи є готова модель. Точну суму фіксуємо в договорі.",
+      "details_en": "## When 3D is really needed\n\n- The product is worth showing from every side\n- The brand gains from an unusual presentation\n- The site has to stand out from competitors, not only take requests\n\nIf the main goal is getting requests from ads quickly, we will honestly recommend a simpler landing page.\n\n## Keeping the beauty from getting in the way\n\n3D and animation easily make a site slow, so we prepare a lighter phone version that keeps the look. For people who have animation turned off in their system, a calm mode without motion is on.\n\nYou change the copy and photos yourself in the admin, without a developer.\n\n## What the price depends on\n\nPrices start at ₴7,500. The complexity of the 3D scene, the amount of animation and pages, and whether a model already exists all change it. The exact sum is fixed in the contract."
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 3,
+    "fields": {
+      "title": "Сайти компаній",
+      "description": "Багатосторінковий сайт компанії, де кожну сторінку можна змінити з адмінки — без програміста й без дзвінка нам.",
+      "deliverables": "Карта сайту під ваші послуги\nДизайн під ваш бренд\nАдмін-панель для всього контенту\nТехнічне SEO з першого дня\nДруга мова за потреби",
+      "price_from": "від 9 500 ₴",
+      "duration": "7 днів",
+      "order": 3,
+      "title_en": "Company websites",
+      "description_en": "A multi-page company site where every page can be changed from the admin — without a developer and without calling us.",
+      "deliverables_en": "A site map built around your services\nDesign that fits your brand\nAn admin panel for all content\nTechnical SEO from day one\nA second language if needed",
+      "price_from_en": "from ₴9,500",
+      "duration_en": "7 days",
+      "slug": "company-website",
+      "headline": "Створення сайту компанії",
+      "headline_en": "Company website development",
+      "seo_title": "Створення сайту компанії від 9 500 ₴ за 7 днів | bruf",
+      "seo_title_en": "Company website development from ₴9,500 in 7 days | bruf",
+      "seo_description": "Багатосторінковий сайт для бізнесу: послуги, ціни, роботи, контакти, адмінка й технічне SEO. Від 9 500 ₴, робоча версія за 7 днів.",
+      "seo_description_en": "A multi-page business website: services, prices, work, contacts, an admin and technical SEO. From ₴9,500, working in 7 days.",
+      "intro": "Сайт компанії — це кілька сторінок під різні запити клієнтів: послуги, ціни, роботи, контакти. Кожну можна змінити в адмінці без програміста й без дзвінка нам.",
+      "intro_en": "A company website is several pages for clients' different questions: services, prices, work, contacts. You can change each of them in the admin, with no developer and no call to us.",
+      "details": "## Кому потрібен сайт компанії\n\n- У вас кілька послуг, і клієнти шукають їх окремо\n- Важливо, щоб вас знаходили в Google за різними запитами\n- Клієнт ухвалює рішення довго й хоче побачити роботи\n- Ви плануєте блог або новини\n\n## Що ви отримуєте\n\nСкладаємо карту сайту під ваші послуги, робимо дизайн під ваш бренд і адмін-панель для всього контенту. Технічне SEO налаштовуємо з першого дня, а за потреби додаємо другу мову.\n\nАбонплати за платформу немає: сайт належить вам.\n\n## Від чого залежить ціна\n\nЦіна починається від 9 500 ₴. Її змінюють кількість сторінок, унікальність дизайну, інтеграції та готовність текстів. Точну суму називаємо після короткої розмови й фіксуємо в договорі.",
+      "details_en": "## Who needs a company website\n\n- You have several services and clients look for them separately\n- It matters that people find you in Google for different searches\n- Clients take time to decide and want to see your work\n- You are planning a blog or news\n\n## What you get\n\nWe draw up a site map around your services, design for your brand and build an admin panel for all the content. Technical SEO is set up from day one, and a second language is added if needed.\n\nThere is no monthly platform fee: the site is yours.\n\n## What the price depends on\n\nPrices start at ₴9,500. The number of pages, how custom the design is, integrations and whether the copy is ready all change it. We name the exact sum after a short talk and fix it in the contract."
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 4,
+    "fields": {
+      "title": "Інтернет-магазини",
+      "description": "Каталог, кошик, оплата й доставка для невеликого й середнього асортименту — без щомісячної абонплати за платформу.",
+      "deliverables": "Каталог із фільтрами й пошуком\nОнлайн-оплата: monobank, LiqPay, WayForPay\nНова пошта: відділення й ТТН\nЗамовлення в адмінці та Telegram\nАналітика продажів",
+      "price_from": "від 12 500 ₴",
+      "duration": "7 днів",
+      "order": 4,
+      "title_en": "Online stores",
+      "description_en": "Catalogue, cart, payment and delivery for a small or medium range — with no monthly platform fee.",
+      "deliverables_en": "A catalogue with filters and search\nOnline payment: monobank, LiqPay, WayForPay\nNova Poshta: branches and waybills\nOrders in the admin and in Telegram\nSales analytics",
+      "price_from_en": "from ₴12,500",
+      "duration_en": "7 days",
+      "slug": "online-store",
+      "headline": "Розробка інтернет-магазину",
+      "headline_en": "Online store development",
+      "seo_title": "Розробка інтернет-магазину від 12 500 ₴ | bruf",
+      "seo_title_en": "Online store development from ₴12,500 | bruf",
+      "seo_description": "Інтернет-магазин із каталогом, кошиком, оплатою monobank, LiqPay чи WayForPay і Новою поштою. Без абонплати за платформу. Від 12 500 ₴, робоча версія за 7 днів.",
+      "seo_description_en": "An online store with a catalogue, cart, monobank, LiqPay or WayForPay payments and Nova Poshta. No platform fee. From ₴12,500, a working version in 7 days.",
+      "intro": "Інтернет-магазин для невеликого й середнього асортименту: каталог, кошик, оплата й доставка. Без щомісячної абонплати за платформу, замовлення приходять в адмінку й Telegram.",
+      "intro_en": "An online store for a small or medium range: catalogue, cart, payment and delivery. No monthly platform fee, and orders come to the admin and Telegram.",
+      "details": "## Що працює з першого дня\n\n- Каталог із фільтрами й пошуком\n- Онлайн-оплата: monobank, LiqPay, WayForPay\n- Нова пошта: вибір відділення й ТТН\n- Замовлення в адмінці та Telegram\n- Аналітика продажів\n\n## Власний магазин чи платформа\n\nНа платформі ви щомісяця платите за доступ і залежите від її правил. Власний магазин коштує один раз, а окремо ви платите лише за домен, сервер і комісію платіжної системи.\n\nЯкщо у вас дуже великий асортимент чи складні правила складу, обговоримо це наперед і чесно скажемо, що підійде краще.\n\n## Від чого залежить ціна\n\nЦіна починається від 12 500 ₴. Її змінюють кількість товарів і фільтрів, способи оплати й доставки та інтеграції. Точну суму фіксуємо в договорі.",
+      "details_en": "## What works from day one\n\n- A catalogue with filters and search\n- Online payment: monobank, LiqPay, WayForPay\n- Nova Poshta: branch selection and waybills\n- Orders in the admin and in Telegram\n- Sales analytics\n\n## Your own store or a platform\n\nOn a platform you pay for access every month and depend on its rules. Your own store is paid for once, and separately you only pay for the domain, the server and the payment provider's fee.\n\nIf you have a very large range or complicated warehouse rules, we will discuss it up front and tell you honestly what fits better.\n\n## What the price depends on\n\nPrices start at ₴12,500. The number of products and filters, payment and delivery methods and integrations all change it. The exact sum is fixed in the contract."
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 5,
+    "fields": {
+      "title": "Вебсервіси й кабінети",
+      "description": "Особисті кабінети, онлайн-запис, калькулятори, внутрішні інструменти — коли конструктори вже не тягнуть.",
+      "deliverables": "Проєктування сценаріїв і ролей\nБекенд на Django, фронт на React\nAPI та інтеграції\nАвтотести й автоматичний деплой\nДокументація",
+      "price_from": "індивідуально",
+      "duration": "7 днів",
+      "order": 5,
+      "title_en": "Web services and dashboards",
+      "description_en": "Personal accounts, online booking, calculators, internal tools — when website builders can no longer cope.",
+      "deliverables_en": "Designing scenarios and roles\nDjango back end, React front end\nAPIs and integrations\nAutomated tests and deployment\nDocumentation",
+      "price_from_en": "custom quote",
+      "duration_en": "7 days",
+      "slug": "web-service",
+      "headline": "Розробка вебсервісу й особистого кабінету",
+      "headline_en": "Web service and client dashboard development",
+      "seo_title": "Розробка вебсервісу й особистого кабінету | bruf",
+      "seo_title_en": "Web service and dashboard development | bruf",
+      "seo_description": "Особисті кабінети, онлайн-запис, калькулятори й внутрішні інструменти на Django та React. Перша робоча версія за 7 днів, ціна після обговорення задачі.",
+      "seo_description_en": "Client dashboards, online booking, calculators and internal tools on Django and React. A first working version in 7 days, priced after discussing the task.",
+      "intro": "Особисті кабінети, онлайн-запис, калькулятори, внутрішні інструменти — коли конструктори вже не тягнуть. Першу робочу версію показуємо за 7 днів, а далі розвиваємо її разом із вами.",
+      "intro_en": "Client dashboards, online booking, calculators, internal tools: for when website builders can no longer cope. We show a first working version in 7 days, then develop it together with you.",
+      "details": "## Коли потрібен вебсервіс\n\n- Клієнтам потрібен особистий кабінет\n- Запис, розрахунки чи заявки досі йдуть вручну\n- Команда працює в таблицях, які вже не справляються\n- Сервіс сам є вашим продуктом\n\n## Як ми працюємо\n\nСпершу проєктуємо сценарії й ролі: хто що бачить і що може робити. Бекенд пишемо на Django, фронтенд на React, додаємо API та інтеграції, автотести й автоматичний деплой, а наприкінці передаємо документацію.\n\nЗа 7 днів ви отримуєте робочу версію з головним сценарієм. Решту функцій додаємо поетапно, щоб ви бачили результат кожного етапу.\n\n## Як рахуємо ціну\n\nВебсервіси дуже різні, тому ціну називаємо після обговорення задачі й фіксуємо в договорі.",
+      "details_en": "## When you need a web service\n\n- Your clients need a personal account\n- Booking, calculations or requests are still done by hand\n- Your team works in spreadsheets that can no longer cope\n- The service is your product\n\n## How we work\n\nFirst we design the scenarios and roles: who sees what and can do what. The back end is Django, the front end React, with APIs and integrations, automated tests and deployment, and we hand over documentation at the end.\n\nIn 7 days you get a working version with the main scenario. Other features are added stage by stage, so you see the result of each one.\n\n## How we price it\n\nWeb services vary a lot, so we name the price after discussing the task and fix it in the contract."
+    }
+  },
+  {
+    "model": "main.service",
+    "pk": 6,
+    "fields": {
+      "title": "Підтримка й розвиток",
+      "description": "Беремо на себе живий сайт: оновлення, нові функції, резервні копії й реакція, якщо щось зламалося.",
+      "deliverables": "Моніторинг і реакція на збої\nРезервні копії\nОновлення безпеки\nНові функції за домовленістю\nЗвіт про виконані роботи",
+      "price_from": "індивідуально",
+      "duration": "постійно",
+      "order": 6,
+      "title_en": "Support and growth",
+      "description_en": "We take care of a live site: updates, new features, backups and a quick response if something breaks.",
+      "deliverables_en": "Monitoring and incident response\nBackups\nSecurity updates\nNew features by agreement\nA report on the work done",
+      "price_from_en": "custom quote",
+      "duration_en": "ongoing",
+      "slug": "support",
+      "headline": "Підтримка й розвиток сайту",
+      "headline_en": "Website support and development",
+      "seo_title": "Підтримка й розвиток сайту | bruf",
+      "seo_title_en": "Website support and development | bruf",
+      "seo_description": "Беремо на себе живий сайт: моніторинг, резервні копії, оновлення безпеки й нові функції. Реагуємо, якщо щось зламалося, і звітуємо про виконану роботу.",
+      "seo_description_en": "We look after your live site: monitoring, backups, security updates and new features. We respond if something breaks and report on the work done.",
+      "intro": "Беремо на себе живий сайт: оновлення, нові функції, резервні копії й реакція, якщо щось зламалося. Ви займаєтесь бізнесом, а сайт просто працює.",
+      "intro_en": "We look after your live site: updates, new features, backups and a response if something breaks. You run the business, and the site simply works.",
+      "details": "## Що входить\n\nСтежимо, щоб сайт працював, і реагуємо на збої. Робимо резервні копії, встановлюємо оновлення безпеки, додаємо нові функції за домовленістю й звітуємо про виконані роботи.\n\n## Кому це потрібно\n\n- Сайт приносить заявки, і простій коштує грошей\n- У вас немає свого розробника\n- Ви плануєте поступово розвивати сайт\n\nСайти, які робили ми, мають місяць гарантійної підтримки безкоштовно. Далі можна взяти пакет годин або просто моніторинг і резервні копії.\n\n## Як рахуємо ціну\n\nЦіна залежить від сайту й обсягу робіт, тому називаємо її після короткої розмови.",
+      "details_en": "## What is included\n\nWe make sure the site is working and respond to incidents. We make backups, install security updates, add new features by agreement and report on the work done.\n\n## Who needs this\n\n- The site brings in requests, and downtime costs money\n- You do not have your own developer\n- You plan to develop the site gradually\n\nSites we built come with a free month of warranty support. After that you can take a package of hours or just monitoring and backups.\n\n## How we price it\n\nThe price depends on the site and the amount of work, so we name it after a short talk."
+    }
+  },
+  {
+    "model": "main.fact",
+    "pk": 1,
+    "fields": {
+      "value": "3",
+      "label": "запущені проєкти в портфоліо",
+      "order": 1,
+      "value_en": "3",
+      "label_en": "launched projects in the portfolio"
+    }
+  },
+  {
+    "model": "main.fact",
+    "pk": 2,
+    "fields": {
+      "value": "7 днів",
+      "label": "від старту до робочої версії сайту",
+      "order": 2,
+      "value_en": "7 days",
+      "label_en": "from kick-off to a working version of the site"
+    }
+  },
+  {
+    "model": "main.fact",
+    "pk": 3,
+    "fields": {
+      "value": "90 днів",
+      "label": "сервера безкоштовно — хостимо на Google Cloud",
+      "order": 3,
+      "value_en": "90 days",
+      "label_en": "of free server time — hosted on Google Cloud"
+    }
+  },
+  {
+    "model": "main.post",
+    "pk": 1,
+    "fields": {
+      "slug": "skilky-koshtuye-sait",
+      "title": "Скільки коштує сайт у 2026 році і з чого складається ціна",
+      "excerpt": "Чому лендінг може коштувати і 3 000, і 30 000 гривень, за що ви насправді платите і як не переплатити за зайве.",
+      "body": "Питання «скільки коштує сайт» схоже на «скільки коштує ремонт»: відповідь залежить від того, що саме треба зробити. Нижче — з чого складається ціна і які суми реалістичні для малого бізнесу.\n\n## З чого складається ціна\n\n- Структура: які блоки потрібні, щоб відвідувач дійшов до заявки\n- Дизайн: шаблон чи макет під ваш бренд\n- Верстка й адаптив: сайт має однаково добре працювати на телефоні й ноутбуці\n- Адмінка: чи зможете ви самі міняти тексти, ціни й фото\n- Інтеграції: оплата, Нова пошта, CRM, Telegram\n- Запуск: домен, сервер, SSL, аналітика\n\nКожен пункт можна зробити дешево або якісно. Різниця в ціні між пропозиціями — це майже завжди різниця в тому, які з цих пунктів входять у роботу.\n\n## Орієнтовні ціни\n\nУ bruf ціни починаються від 5 500 ₴ за лендінг, 7 500 ₴ за анімований 3D-сайт, 9 500 ₴ за сайт компанії та 12 500 ₴ за інтернет-магазин. Точна сума залежить від обсягу й фіксується в договорі після брифу — без «а це вже окремо» в середині роботи.\n\n## Де не варто економити\n\n- Швидкість: кожна зайва секунда завантаження з'їдає частину заявок\n- Мобільна версія: більшість відвідувачів приходять з телефона\n- Адмінка: інакше кожна зміна ціни перетворюється на дзвінок розробнику\n\n## Де можна заощадити\n\n- Тексти й фото: якщо вони у вас уже є, робота йде швидше й дешевше\n- Кількість сторінок: на старті часто вистачає лендінга, а сайт можна розширити пізніше\n- Анімації: гарні, але не кожному бізнесу потрібні з першого дня\n\nЯкщо хочете зрозуміти бюджет саме для вашої задачі — напишіть у Telegram, порахуємо за один діалог.",
+      "category": "guides",
+      "cover": "",
+      "published_at": "2026-10-20T10:00:00+03:00",
+      "updated_at": "2026-10-20T10:00:00+03:00",
+      "is_published": true,
+      "is_featured": true,
+      "author": "Богдан Кузик",
+      "author_role": "Засновник bruf",
+      "title_en": "What a website costs in 2026 and what makes up the price",
+      "excerpt_en": "Why a landing page can cost 3,000 or 30,000 hryvnias, what you are really paying for and how not to overpay for extras.",
+      "author_role_en": "Founder of bruf",
+      "body_en": "Asking “how much does a website cost” is like asking “how much does a renovation cost”: the answer depends on what exactly needs doing. Below is what makes up the price and which sums are realistic for a small business.\n\n## What makes up the price\n\n- Structure: which sections a visitor needs to get to the request form\n- Design: a template or a layout made for your brand\n- Front end and mobile: the site has to work equally well on a phone and a laptop\n- Admin: whether you can change copy, prices and photos yourself\n- Integrations: payments, Nova Poshta, CRM, Telegram\n- Launch: domain, server, SSL, analytics\n\nEach item can be done cheaply or properly. The price gap between offers is almost always a gap in which of these items are included.\n\n## Ballpark prices\n\nAt bruf prices start at ₴5,500 for a landing page, ₴7,500 for an animated 3D site, ₴9,500 for a company site and ₴12,500 for an online store. The exact sum depends on the scope and is fixed in the contract after the brief — no “oh, that's extra” halfway through.\n\n## Where not to save\n\n- Speed: every extra second of loading eats part of your requests\n- Mobile version: most visitors come from a phone\n- Admin: otherwise every price change turns into a call to the developer\n\n## Where you can save\n\n- Copy and photos: if you already have them, the work goes faster and costs less\n- Number of pages: a landing page is often enough at the start, and the site can grow later\n- Animation: beautiful, but not every business needs it from day one\n\nIf you want to understand the budget for your own task, message us on Telegram — we will work it out in one conversation."
+    }
+  },
+  {
+    "model": "main.post",
+    "pk": 2,
+    "fields": {
+      "slug": "lending-chy-sait-kompanii",
+      "title": "Лендінг чи сайт компанії: що обрати для бізнесу",
+      "excerpt": "Одна сторінка під одну дію чи кілька сторінок під різні запити клієнтів — розбираємо, коли що працює краще.",
+      "body": "Лендінг і сайт компанії вирішують різні задачі. Обирати варто не за ціною, а за тим, що має зробити відвідувач.\n\n## Коли потрібен лендінг\n\nЛендінг — це одна сторінка, яка веде до однієї дії: залишити заявку, записатися, купити. Він підходить, якщо:\n\n- ви запускаєте рекламу на одну послугу чи продукт\n- у вас одна основна пропозиція\n- треба швидко перевірити ідею або попит\n- хочете стартувати з меншим бюджетом\n\n## Коли потрібен сайт компанії\n\nСайт компанії має кілька сторінок: послуги, ціни, роботи, команда, контакти. Він потрібен, якщо:\n\n- у вас кілька послуг і клієнти шукають їх окремо\n- важливо, щоб вас знаходили в Google за різними запитами\n- клієнт ухвалює рішення довго й хоче подивитися роботи та відгуки\n- ви плануєте блог або новини\n\n## Як не помилитися\n\nПочніть з питання: що людина має зробити на сайті? Якщо відповідь одна — «залишити заявку на конкретну послугу», лендінг дасть результат швидше й дешевше. Якщо клієнти приходять з різними питаннями — потрібна структура з кількох сторінок.\n\nДобрий варіант на старті — лендінг з думкою про майбутнє: зроблений так, щоб пізніше його можна було розширити до повноцінного сайту без переробки з нуля.",
+      "category": "comparison",
+      "cover": "",
+      "published_at": "2026-10-27T10:00:00+03:00",
+      "updated_at": "2026-10-27T10:00:00+03:00",
+      "is_published": true,
+      "is_featured": false,
+      "author": "Богдан Кузик",
+      "author_role": "Засновник bruf",
+      "title_en": "Landing page or company website: what to choose for your business",
+      "excerpt_en": "One page for one action, or several pages for clients' different questions — when each works better.",
+      "author_role_en": "Founder of bruf",
+      "body_en": "A landing page and a company website solve different problems. Choose not by price but by what the visitor has to do.\n\n## When you need a landing page\n\nA landing page is one page that leads to one action: leave a request, book, buy. It fits if:\n\n- you are running ads for one service or product\n- you have one main offer\n- you need to test an idea or demand quickly\n- you want to start on a smaller budget\n\n## When you need a company website\n\nA company website has several pages: services, prices, work, team, contacts. You need one if:\n\n- you have several services and clients look for them separately\n- it matters that people find you in Google for different searches\n- the client takes time to decide and wants to see your work and reviews\n- you are planning a blog or news\n\n## How not to get it wrong\n\nStart with the question: what should a person do on the site? If there is one answer — “leave a request for a specific service” — a landing page will bring results faster and for less. If clients come with different questions, you need a structure of several pages.\n\nA good option to start with is a landing page built with the future in mind: made so that it can later grow into a full website without rebuilding from scratch."
+    }
+  },
+  {
+    "model": "main.post",
+    "pk": 3,
+    "fields": {
+      "slug": "pidgotovka-do-rozrobky-saitu",
+      "title": "Як підготуватися до розробки сайту: чекліст на 15 хвилин",
+      "excerpt": "Що підготувати перед першою розмовою з розробником, щоб сайт зробили швидше, дешевше і саме таким, як вам треба.",
+      "body": "Чим краще ви знаєте, що хочете отримати, тим швидше й дешевше буде розробка. Цей чекліст займе 15 хвилин і заощадить тижні правок.\n\n## 1. Мета сайту\n\nСформулюйте одним реченням, що має зробити відвідувач: зателефонувати, записатися, купити, залишити заявку. Це головне рішення, від якого залежить уся структура.\n\n## 2. Хто ваші клієнти\n\n- Хто вони і звідки приходять: реклама, Google, Instagram, рекомендації\n- Які питання ставлять найчастіше\n- Що їх зупиняє від покупки\n\nВідповіді на ці питання стануть блоками сайту.\n\n## 3. Приклади\n\nЗнайдіть 2–3 сайти, які вам подобаються, і 1–2, які не подобаються. Не обов'язково з вашої ніші — важливо пояснити, що саме подобається: кольори, простота, анімації, подача.\n\n## 4. Контент\n\n- Логотип і фірмові кольори, якщо вони є\n- Фото робіт, команди, приміщення\n- Ціни або хоча б діапазони\n- Відгуки клієнтів\n\nНемає текстів — не страшно, їх можна підготувати разом. Але фото вашого бізнесу краще за будь-які стокові.\n\n## 5. Технічні деталі\n\n- Чи є домен і де він зареєстрований\n- Куди мають приходити заявки: пошта, Telegram, CRM\n- Чи потрібна онлайн-оплата або доставка\n\nЗ цим списком перша розмова займе пів години, а не кілька зустрічей. Надішліть відповіді в Telegram — і отримаєте оцінку термінів і вартості.",
+      "category": "guides",
+      "cover": "",
+      "published_at": "2026-11-03T10:00:00+03:00",
+      "updated_at": "2026-11-03T10:00:00+03:00",
+      "is_published": true,
+      "is_featured": false,
+      "author": "Богдан Кузик",
+      "author_role": "Засновник bruf",
+      "title_en": "How to prepare for website development: a 15-minute checklist",
+      "excerpt_en": "What to prepare before your first talk with a developer, so the site is built faster, cheaper and exactly the way you need.",
+      "author_role_en": "Founder of bruf",
+      "body_en": "The better you know what you want to get, the faster and cheaper development will be. This checklist takes 15 minutes and saves weeks of revisions.\n\n## 1. The goal of the site\n\nPut in one sentence what a visitor should do: call, book, buy, leave a request. This is the main decision, and the whole structure depends on it.\n\n## 2. Who your clients are\n\n- Who they are and where they come from: ads, Google, Instagram, recommendations\n- Which questions they ask most often\n- What stops them from buying\n\nThe answers to these questions become the sections of the site.\n\n## 3. Examples\n\nFind 2–3 sites you like and 1–2 you don't. They don't have to be from your niche — what matters is explaining what exactly you like: colours, simplicity, animation, presentation.\n\n## 4. Content\n\n- Logo and brand colours, if you have them\n- Photos of your work, team and premises\n- Prices, or at least ranges\n- Client reviews\n\nNo copy yet is not a problem — it can be prepared together. But photos of your own business beat any stock images.\n\n## 5. Technical details\n\n- Whether you have a domain and where it is registered\n- Where requests should go: email, Telegram, CRM\n- Whether you need online payment or delivery\n\nWith this list the first conversation takes half an hour instead of several meetings. Send your answers on Telegram and get an estimate of the timeline and cost."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 7,
+    "fields": {
+      "question": "Хто купує домен і хостинг?",
+      "answer": "Домен реєструється на вас — це ваша власність, і доступ до нього завжди у вас. Допоможемо обрати й зареєструвати назву. Сайт розмістимо на сервері з резервними копіями або на вашому хостингу — як зручніше. Перші 90 днів сервер безкоштовний — розміщуємо на Google Cloud; далі сервер і домен оплачуються за тарифами провайдера.",
+      "order": 5,
+      "question_en": "Who buys the domain and hosting?",
+      "answer_en": "The domain is registered in your name — it is your property, and you always keep access to it. We will help you choose and register the name. We host the site on a server with backups or on your hosting, whichever suits you. The first 90 days of server time are free — we host on Google Cloud; after that the server and domain are paid at the provider's rates."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 8,
+    "fields": {
+      "question": "Хто наповнює сайт контентом?",
+      "answer": "Перше наповнення входить у роботу: розставляємо ваші тексти й фото. Якщо текстів ще немає — допоможемо скласти структуру й тексти для основних блоків. Далі ви змінюєте все самі в адмінці.",
+      "order": 6,
+      "question_en": "Who fills the site with content?",
+      "answer_en": "The first fill is part of the job: we lay out your copy and photos. If there is no copy yet, we help put together the structure and texts for the main sections. After that you change everything yourself in the admin."
+    }
+  },
+  {
+    "model": "main.faqitem",
+    "pk": 9,
+    "fields": {
+      "question": "Скільки коштують зміни після запуску?",
+      "answer": "Дрібні правки протягом місяця гарантійної підтримки — безкоштовно. Тексти, ціни й фото ви змінюєте самі в адмінці. Нові блоки чи функції оцінюємо окремо й погоджуємо суму до початку роботи.",
+      "order": 9,
+      "question_en": "How much do changes after launch cost?",
+      "answer_en": "Small fixes during the month of warranty support are free. Copy, prices and photos you change yourself in the admin. New sections or features are estimated separately, and we agree on the sum before starting."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 1,
+    "fields": {
+      "service": 1,
+      "order": 1,
+      "question": "Скільки коштує лендінг?",
+      "answer": "Від 5 500 ₴. Точна сума залежить від кількості блоків, анімацій та інтеграцій і фіксується в договорі.",
+      "question_en": "How much does a landing page cost?",
+      "answer_en": "From ₴5,500. The exact sum depends on the number of sections, animation and integrations, and is fixed in the contract."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 2,
+    "fields": {
+      "service": 1,
+      "order": 2,
+      "question": "За скільки днів буде готовий лендінг?",
+      "answer": "Робочу версію показуємо за 7 днів від старту.",
+      "question_en": "How soon will the landing page be ready?",
+      "answer_en": "We show a working version within 7 days of the start."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 3,
+    "fields": {
+      "service": 1,
+      "order": 3,
+      "question": "Чи можна потім розширити лендінг до повноцінного сайту?",
+      "answer": "Так. Робимо його так, щоб пізніше можна було додати сторінки без переробки з нуля.",
+      "question_en": "Can a landing page grow into a full website later?",
+      "answer_en": "Yes. We build it so that pages can be added later without starting over."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 4,
+    "fields": {
+      "service": 2,
+      "order": 1,
+      "question": "Скільки коштує 3D-сайт?",
+      "answer": "Від 7 500 ₴. Ціна залежить від складності сцени, кількості анімацій і сторінок.",
+      "question_en": "How much does a 3D website cost?",
+      "answer_en": "From ₴7,500. The price depends on the complexity of the scene and the amount of animation and pages."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 5,
+    "fields": {
+      "service": 2,
+      "order": 2,
+      "question": "Чи не буде сайт гальмувати на телефоні?",
+      "answer": "Для телефонів готуємо легшу версію, а для тих, хто вимкнув анімації, — режим без руху.",
+      "question_en": "Won't the site lag on a phone?",
+      "answer_en": "We prepare a lighter version for phones, and a mode without motion for people who turned animation off."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 6,
+    "fields": {
+      "service": 2,
+      "order": 3,
+      "question": "Чи потрібна готова 3D-модель?",
+      "answer": "Не обов'язково. Якщо моделі немає, обговоримо, що саме показати, і врахуємо це в оцінці.",
+      "question_en": "Do I need a ready 3D model?",
+      "answer_en": "Not necessarily. If there is none, we will discuss what to show and include it in the estimate."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 7,
+    "fields": {
+      "service": 3,
+      "order": 1,
+      "question": "Скільки коштує сайт компанії?",
+      "answer": "Від 9 500 ₴. Точна сума залежить від кількості сторінок та інтеграцій і фіксується в договорі.",
+      "question_en": "How much does a company website cost?",
+      "answer_en": "From ₴9,500. The exact sum depends on the number of pages and integrations, and is fixed in the contract."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 8,
+    "fields": {
+      "service": 3,
+      "order": 2,
+      "question": "Чи зможу я сам змінювати сайт?",
+      "answer": "Так. Тексти, ціни, фото й роботи редагуються в адмін-панелі, а після запуску проводимо коротке навчання.",
+      "question_en": "Will I be able to change the site myself?",
+      "answer_en": "Yes. Copy, prices, photos and work are edited in the admin panel, and we give you a short walkthrough after launch."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 9,
+    "fields": {
+      "service": 3,
+      "order": 3,
+      "question": "Чи буде сайт видно в Google?",
+      "answer": "Технічне SEO налаштовуємо з першого дня. Позиції залежать ще й від конкуренції та контенту, тому конкретних місць не обіцяємо.",
+      "question_en": "Will the site show up in Google?",
+      "answer_en": "Technical SEO is set up from day one. Rankings also depend on competition and content, so we do not promise specific positions."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 10,
+    "fields": {
+      "service": 4,
+      "order": 1,
+      "question": "Скільки коштує інтернет-магазин?",
+      "answer": "Від 12 500 ₴. Ціна залежить від каталогу, способів оплати й доставки та інтеграцій.",
+      "question_en": "How much does an online store cost?",
+      "answer_en": "From ₴12,500. The price depends on the catalogue, payment and delivery methods and integrations."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 11,
+    "fields": {
+      "service": 4,
+      "order": 2,
+      "question": "Чи є щомісячна абонплата?",
+      "answer": "За платформу — ні. Окремо оплачуються домен, сервер і комісія платіжної системи. Перші 90 днів сервер безкоштовний.",
+      "question_en": "Is there a monthly fee?",
+      "answer_en": "Not for a platform. The domain, server and payment provider's fee are paid separately. The first 90 days of server time are free."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 12,
+    "fields": {
+      "service": 4,
+      "order": 3,
+      "question": "Які оплати можна підключити?",
+      "answer": "monobank, LiqPay і WayForPay, а доставку — через Нову пошту.",
+      "question_en": "Which payments can be connected?",
+      "answer_en": "monobank, LiqPay and WayForPay, with delivery through Nova Poshta."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 13,
+    "fields": {
+      "service": 5,
+      "order": 1,
+      "question": "Скільки коштує вебсервіс?",
+      "answer": "Ціна залежить від задачі, тому називаємо її після обговорення й фіксуємо в договорі.",
+      "question_en": "How much does a web service cost?",
+      "answer_en": "It depends on the task, so we name the price after discussing it and fix it in the contract."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 14,
+    "fields": {
+      "service": 5,
+      "order": 2,
+      "question": "Що саме буде готово за 7 днів?",
+      "answer": "Робоча версія з головним сценарієм. Решту функцій додаємо поетапно.",
+      "question_en": "What exactly will be ready in 7 days?",
+      "answer_en": "A working version with the main scenario. Other features are added stage by stage."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 15,
+    "fields": {
+      "service": 5,
+      "order": 3,
+      "question": "На чому ви пишете?",
+      "answer": "Бекенд на Django, фронтенд на React.",
+      "question_en": "What do you build with?",
+      "answer_en": "Django on the back end and React on the front end."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 16,
+    "fields": {
+      "service": 6,
+      "order": 1,
+      "question": "Скільки коштує підтримка сайту?",
+      "answer": "Залежить від сайту й обсягу робіт: пакет годин або лише моніторинг і резервні копії.",
+      "question_en": "How much does website support cost?",
+      "answer_en": "It depends on the site and the amount of work: a package of hours, or just monitoring and backups."
+    }
+  },
+  {
+    "model": "main.servicequestion",
+    "pk": 17,
+    "fields": {
+      "service": 6,
+      "order": 2,
+      "question": "Чи є безкоштовна гарантія?",
+      "answer": "На сайти, які робили ми, — місяць гарантійної підтримки безкоштовно.",
+      "question_en": "Is there a free warranty?",
+      "answer_en": "Sites we built come with a free month of warranty support."
+    }
+  },
+  {
+    "model": "main.sitetype",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "title": "Сайти для закладів і сервісів",
+      "description": "Для місць, куди клієнт приходить особисто: меню чи послуги, ціни, запис або бронювання.",
+      "audience": "Ресторани\nКафе\nСтоматології\nОрендні будиночки\nГотелі\nБази відпочинку",
+      "formats_title": "Для кафе й ресторанів — два формати",
+      "formats": "Простий сайт-візитка — розповідає про заклад, без каталогу й онлайн-замовлення\nВеликий сайт — з каталогом страв і онлайн-замовленням",
+      "examples": [
+        4,
+        1,
+        2
+      ],
+      "title_en": "Sites for venues and local services",
+      "description_en": "For places clients visit in person: a menu or services, prices, booking.",
+      "audience_en": "Restaurants\nCafés\nDental clinics\nRental cottages\nHotels\nHoliday resorts",
+      "formats_title_en": "Two formats for cafés and restaurants",
+      "formats_en": "A simple business-card site — about the venue, with no catalogue or online ordering\nA large site — with a dish catalogue and online ordering"
+    }
+  },
+  {
+    "model": "main.sitetype",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "title": "Сайт-візитка для компанії",
+      "description": "Показує, чим займається компанія, і допомагає клієнту швидко зв'язатися.",
+      "audience": "Будівельні та ремонтні компанії\nВиробничі підприємства\nЮридичні та консалтингові компанії\nТоргові та дистриб'юторські компанії",
+      "formats_title": "",
+      "formats": "",
+      "examples": [],
+      "title_en": "Business-card site for a company",
+      "description_en": "Shows what the company does and helps clients get in touch quickly.",
+      "audience_en": "Construction and renovation companies\nManufacturers\nLaw and consulting firms\nTrading and distribution companies",
+      "formats_title_en": "",
+      "formats_en": ""
+    }
+  },
+  {
+    "model": "main.sitetype",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "title": "Сайт-візитка для самозайнятих",
+      "description": "Особиста сторінка з вашими роботами, послугами й контактами.",
+      "audience": "Дизайнери одягу та власники локальних fashion-брендів\nФотографи та відеографи\nГрафічні та вебдизайнери\nАрхітектори та дизайнери інтер'єру\nХудожники та майстри handmade\nЮвелірні майстри\nЕксперти, консультанти та тренери\nПсихологи та приватні спеціалісти",
+      "formats_title": "",
+      "formats": "",
+      "examples": [],
+      "title_en": "Business-card site for the self-employed",
+      "description_en": "A personal page with your work, services and contacts.",
+      "audience_en": "Fashion designers and owners of local fashion brands\nPhotographers and videographers\nGraphic and web designers\nArchitects and interior designers\nArtists and handmade makers\nJewellers\nExperts, consultants and coaches\nPsychologists and private practitioners",
+      "formats_title_en": "",
+      "formats_en": ""
+    }
+  },
+  {
+    "model": "main.sitetype",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "title": "Інтернет-магазини",
+      "description": "Локальні й онлайн-магазини з каталогом товарів.",
+      "audience": "Магазини одягу та взуття\nМагазини меблів і предметів інтер'єру\nМагазини косметики\nМагазини локальних брендів\nОнлайн-каталоги продукції виробників",
+      "formats_title": "",
+      "formats": "",
+      "examples": [],
+      "title_en": "Online stores",
+      "description_en": "Local and online stores with a product catalogue.",
+      "audience_en": "Clothing and footwear stores\nFurniture and home decor stores\nCosmetics stores\nLocal brand stores\nManufacturers' online product catalogues",
+      "formats_title_en": "",
+      "formats_en": ""
+    }
+  }
+]

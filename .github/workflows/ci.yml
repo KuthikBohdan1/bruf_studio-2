@@ -1,0 +1,127 @@
+# CI on every push and pull request; CD to the VPS from `prod` once CI is green.
+#
+# Deploy secrets (Settings → Secrets and variables → Actions, environment `production`):
+#   VPS_HOST         server address
+#   VPS_USER         SSH user
+#   VPS_SSH_KEY      private key whose public half is pinned to scripts/deploy.sh
+#                    on the server (command="…" in authorized_keys)
+#   VPS_KNOWN_HOSTS  output of `ssh-keyscan <host>`, so the host key is verified
+
+name: CI
+
+on:
+  push:
+    branches: [dev, main, stable, prod]
+  pull_request:
+  # Manual run from the Actions tab; on prod it redeploys.
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  # Superseded runs are cancelled, except on prod where a deploy may be underway.
+  cancel-in-progress: ${{ github.ref != 'refs/heads/prod' }}
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: Backend (Ruff, migrations)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: django
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: studio
+          POSTGRES_USER: studio
+          POSTGRES_PASSWORD: studio
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U studio"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      # Same engine as production: SQLite let a Postgres-only migration bug through once.
+      POSTGRES_DB: studio
+      POSTGRES_USER: studio
+      POSTGRES_PASSWORD: studio
+      POSTGRES_HOST: 127.0.0.1
+      POSTGRES_PORT: "5432"
+      SECRET_KEY: ci-only-not-secret
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: django/requirements*.txt
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check .
+      - run: ruff format --check .
+      - name: Migrations match models
+        run: python manage.py makemigrations --check --dry-run
+      - name: Migrations apply on Postgres
+        run: python manage.py migrate --noinput
+
+  frontend:
+    name: Frontend (ESLint, typecheck, build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: front/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - name: Typecheck and build
+        run: npm run build
+
+  image:
+    name: Docker image
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: docker/setup-buildx-action@v3
+      - name: Build (not pushed — the server builds its own copy)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy to VPS
+    needs: image
+    if: github.ref == 'refs/heads/prod' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://bruf.pro
+    concurrency:
+      group: deploy-prod
+      cancel-in-progress: false
+    steps:
+      - name: Run scripts/deploy.sh on the server
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          # The key is pinned to deploy.sh server-side, so no command is sent.
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$VPS_USER@$VPS_HOST"

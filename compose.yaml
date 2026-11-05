@@ -1,0 +1,58 @@
+name: studio
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      # Loopback only — the database must never be reachable from the internet.
+      # Reach it from another machine over an SSH tunnel, not by widening this.
+      - "127.0.0.1:${POSTGRES_PORT_EXTERNAL:-5438}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: studio-web
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Always talk to the compose database, whatever .env says for host runs.
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+    volumes:
+      # Admin uploads survive rebuilds; the rest of the app lives in the image.
+      - media_data:/srv/media
+    ports:
+      # Loopback only. Locally this is the site; in production Caddy terminates
+      # TLS and reaches this service over the compose network as web:8000, so
+      # gunicorn itself is never exposed directly.
+      - "127.0.0.1:${WEB_PORT:-8008}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      # The probe claims X-Forwarded-Proto: https exactly as Caddy would, so
+      # SECURE_SSL_REDIRECT does not bounce it to a URL nothing is listening on.
+      # This is why 127.0.0.1 has to stay in ALLOWED_HOSTS in production.
+      test: ["CMD-SHELL", "python -c \"import urllib.request as u; u.urlopen(u.Request('http://127.0.0.1:8000/api/site/', headers={'X-Forwarded-Proto': 'https'}), timeout=5)\""]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+volumes:
+  postgres_data:
+  media_data:

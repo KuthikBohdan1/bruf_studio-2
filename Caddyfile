@@ -1,0 +1,31 @@
+{
+	# Let's Encrypt uses this address for certificate-expiry warnings.
+	email {$ACME_EMAIL}
+}
+
+# The scheme in SITE_ADDRESS decides how this site is served:
+#   example.com        -> Caddy obtains a certificate and redirects :80 to :443
+#   http://example.com -> plain HTTP, no ACME (used once to prove :80 is open)
+{$SITE_ADDRESS} {
+	encode zstd gzip
+
+	# reverse_proxy sets X-Forwarded-Proto/-Host/-For by default; Django reads
+	# the first of those (SECURE_PROXY_SSL_HEADER) to know the request was HTTPS.
+	# Admin uploads (images, showreel and case videos) straight from the shared
+	# volume. Unlike Django, file_server supports Range requests and ETags.
+	handle_path /media/* {
+		root * /srv/media
+		header Cache-Control "public, max-age=86400"
+		file_server
+	}
+
+	reverse_proxy web:8000
+
+	# Do not advertise the server software.
+	header -Server
+
+	log {
+		output stdout
+		format console
+	}
+}

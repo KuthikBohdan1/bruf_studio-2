@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# Lint and format (CI runs `ruff check` and `ruff format --check`).
+ruff==0.14.4

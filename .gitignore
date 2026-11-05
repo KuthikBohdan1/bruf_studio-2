@@ -1,0 +1,30 @@
+# Environment
+.env
+.envrc
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ENV/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/django/media/
+/django/staticfiles/
+/django/.cache/
+/django/frontend_dist/
+*.log
+
+# Node
+node_modules/
+/front/dist/
+
+# Editors / OS
+.idea/
+.DS_Store
+
+# Local browser checks
+.playwright-mcp/
